@@ -40,9 +40,7 @@ void philosopher(int id) {
 	srand( getpid() );
 
 	while(1){
-		k = rand()%5;
-		printf("(╯°□°）╯ %d - ‎I'm thinking, I'll try to eat in %i seconds\n", id, k);
-		sleep(k);
+		printf("(╯°□°）╯ %d - ‎I'm thinking, I'll try to eat\n", id);
 		get_forks(semid,id);
 		int l,r;
 		l = left(id);

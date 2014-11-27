@@ -51,7 +51,7 @@ void cliente(pelo_crece){
 		
 		mutex_wait(semid,MUTEX);
 			Rooms->room1 += 1;
-			printf("%i al room 1\n",getpid());
+			printf("%i en el room 1\n",getpid());
 		mutex_signal(semid,MUTEX);
 
 		sem_wait(semid,T1,1);
@@ -66,6 +66,7 @@ void cliente(pelo_crece){
 			} else {
 				mutex_signal(semid,MUTEX);
 				sem_signal(semid,T1,1);
+				printf("%i dice: Me quedo en el cuarto 1\n",getpid());
 			}
 
 		sem_wait(semid,T2,1);

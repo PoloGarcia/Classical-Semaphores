@@ -13,7 +13,7 @@ void reader(){
 		exit(-1);
 	}
 
-	if ( (semid = semget(key, 3, 0666))  < 0 ) {
+	if ( (semid = semget(key, 2, 0666))  < 0 ) {
 		perror("semget");
 		exit(-1);
 	}
